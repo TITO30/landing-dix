@@ -1,12 +1,19 @@
 import Head from "next/head";
+import { useRef } from "react";
 import { Banner } from "../components/Banner/Banner";
 import { ColorBar } from "../components/ColorBar/ColorBar";
 import { Footer } from "../components/Footer/Footer";
 import { Form } from "../components/Form/Form";
+import { Header } from "../components/Header/Header";
 import { Information } from "../components/Information-Banner/Information-Banner";
 import { Services } from "../components/Services/Services.jsx";
 
 export default function Home() {
+  let beginning = useRef();
+  let about = useRef();
+  let services = useRef();
+  let contact = useRef();
+
   return (
     <>
       <Head>
@@ -20,12 +27,13 @@ export default function Home() {
         />
       </Head>
 
-      <Banner />
-      <Information />
-      <Services />
-      <ColorBar/>
-      <Form/>
-      <Footer/>
+      <Header />
+      <Banner beginning={beginning} />
+      <Information about={about} />
+      <Services services={services} />
+      <ColorBar />
+      <Form contact={contact} />
+      <Footer />
     </>
   );
 }

@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const BannerStyles = styled.div`
   display: block;
   .banner-container {
-    background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
     height: 100vh !important;
@@ -18,6 +17,7 @@ export const BannerStyles = styled.div`
     top: 0;
     margin: 0;
     padding: 0;
+    object-fit:cover;
   }
 
   .banner-container::before {

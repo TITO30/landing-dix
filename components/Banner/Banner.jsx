@@ -2,18 +2,21 @@ import React from "react";
 import { BannerStyles } from "./Banner.styles";
 import background from "../../public/assets/img/bg-home.jpg";
 import { Particules } from "../Particules/Particules";
-import 'animate.css';
+import "animate.css";
 
-export const Banner = () => {
+export const Banner = ({ beginning }) => {
   return (
     <BannerStyles>
       <div
+        ref={beginning}
         className="banner-container"
         style={{ backgroundImage: `url(${background.src})` }}
       >
         <Particules />
         <div className="banner">
-          <h4 className="title animate__animated animate__fadeInDown">AWESOME DESIGN</h4>
+          <h4 className="title animate__animated animate__fadeInDown">
+            AWESOME DESIGN
+          </h4>
           <h1 className="title-banner animate__animated animate__fadeInDown">
             Programando con la inspiración que nos hace grandes
           </h1>

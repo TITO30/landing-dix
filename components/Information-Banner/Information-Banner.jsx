@@ -4,10 +4,10 @@ import Img1 from "../../public/assets/img/growth-analytics.svg";
 import { InformationStyles } from "./Information-Banner.styles";
 import 'animate.css';
 
-export const Information = () => {
+export const Information = ({about}) => {
   return (
     <InformationStyles>
-      <div className="information-container">
+      <div ref={about} className="information-container">
         <div className="information-section">
           <div className="information-text animate__animated animate__fadeInLeft">
             <h3>Una consultora web que crea contenido moderno y atractivo</h3>

@@ -3,10 +3,10 @@ import { ServicesCard } from "./ServiceCard/ServicesCard";
 import { servicesData } from "./Services";
 import { ServicesStyles } from "./Services.styles";
 
-export const Services = () => {
+export const Services = ({services}) => {
   return (
     <ServicesStyles>
-      <div>
+      <div ref={services}>
         <h1 className="services-title">Nuestros servicios</h1>
         <div className="line"></div>
         <p className="services-paragraph">
